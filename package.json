@@ -2,12 +2,13 @@
   "name": "express-play",
   "version": "1.0.0",
   "description": "play web app using express js",
-  "main": "app.js",
+  "main": "app-client/client-app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=development",
-    "start": "node app.js",
-    "watch": "nodemon --ext *"
+    "start": "node app.cjs",
+    "watch": "nodemon app.cjs --ext *"
   },
   "keywords": [
     "express",
@@ -17,10 +18,15 @@
   "author": "Shahid Ali",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.0",
     "@types/express": "^4.17.13",
     "@types/node": "~17.0.17",
     "connect-livereload": "^0.6.1",
     "css-loader": "^6.6.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
     "livereload": "^0.9.3",
     "mini-css-extract-plugin": "^2.5.3",
     "nodemon": "^2.0.15",
@@ -28,11 +34,10 @@
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
     "webpack-cli": "^4.9.2",    
-    "ejs": "^3.1.6",
-    "express": "^4.17.2"
+    "@types/bootstrap": "^5.1.9"
   },
   "dependencies": {
     "bootstrap-icons": "^1.8.1",
-    "bs-datatable": "^1.0.19"
+    "bs-datatable": "^1.0.40"
   }
 }
